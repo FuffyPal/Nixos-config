@@ -6,7 +6,7 @@
     autoLogin.delay = 2;
   };
   services.displayManager.autoLogin = {
-    user = "[redected]";
+    user = "secret";
     enable = true;
   };
   services.displayManager.defaultSession = "gnome";
@@ -63,4 +63,3 @@
 
   ];
 }
-
