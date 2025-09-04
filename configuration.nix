@@ -13,7 +13,7 @@
       ./gnome.nix
       ./packages.nix
       ./flatpak.nix
-
+      ./zsh.nix
     ];
 
   # Bootloader.
@@ -67,10 +67,11 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.[redected] = {
+  users.users.secret = {
     isNormalUser = true;
-    description = "[redected]";
+    description = "secret";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     #  thunderbird
     ];
