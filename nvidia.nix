@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 {
   # Enable OpenGL
   hardware.graphics = {
@@ -22,10 +22,9 @@
       enable = true;
       enableOffloadCmd = true;
     };
-    # Make sure to use the correct Bus ID values for your system!
-    # intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
     amdgpuBusId = "PCI:5:0:0"; # For AMD IGPU
+    };
   };
-  };
+  hardware.nvidia-container-toolkit.enable = true;
 }
